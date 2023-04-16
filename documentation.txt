@@ -1,0 +1,122 @@
+-----------------------------------------------------------------------------------------------------------------------------                                                      -:Introduction:-
+
+       Treasure Hunt is an online game where users can solve puzzles and riddles to progress through a series of challenges in order to find the hidden treasure. The purpose of the project is to provide a fun and engaging experience for users who enjoy solving puzzles and riddles.
+
+The scope of the project includes designing and developing a web application that provides a range of challenging puzzles and riddles for users to solve. The project also includes creating a user authentication system to ensure the security of the application, and implementing a leaderboard to track the progress of users and display the top performers.
+
+Overall, the goal of the Treasure Hunt project is to create an enjoyable and interactive experience for users while also providing a platform for them to compete and challenge themselves against others.
+
+-----------------------------------------------------------------------------------------------------------------------------                                                     -:Architecture:-
+
+The high-level overview of the project's architecture and components could be as follows:
+
+1.Front-end: This layer consists of the user interface, which is built using HTML, CSS, and JavaScript. It includes the login and registration pages, the game board, and other visual elements.
+
+2.Back-end: This layer consists of the server-side code that handles user requests and performs the necessary operations. It includes the game logic, such as generating clues, checking answers, and updating the score. The back-end could be built using a server-side language such as PHP,  and a database such as MySQL or MongoDB.
+
+3.APIs: Application Programming Interfaces are used to connect the front-end and back-end components. They provide a standard way for different components to communicate with each other. APIs could be RESTful APIs, which use HTTP requests to access and manipulate data.
+
+4.Hosting: The project needs to be hosted on a web server so that it can be accessed by users. Hosting can be done on cloud platforms such as AWS, Google Cloud, or Microsoft Azure, or on a self-hosted server.
+
+5.Security: Since the project involves sensitive user data such as login credentials and scores, security should be a major concern. The project should implement appropriate security measures such as encryption, password hashing, and secure connections (HTTPS).
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Security: Since the project involves sensitive user data such as login credentials and scores, security should be a major concern. The project should implement appropriate security measures such as encryption, password hashing, and secure connections (HTTPS).
+
+-----------------------------------------------------------------------------------------------------------------------------
+FILES
+
+1.Registration
+
+This is a registration page for a website. It consists of HTML and CSS code that creates the visual layout of the page, including input fields for the user to enter their ID, email address, and password. The PHP code at the bottom is used to process the user's input when they click the "Register" button.
+
+The PHP code checks if the user entered a valid email address using the FILTER_VALIDATE_EMAIL filter and if the password is at least 8 characters long. It then uses the password_hash function to hash the user's password before inserting the user's information into a database. Finally, it redirects the user to the login page.
+
+Overall, this code allows users to register for a website and stores their information in a database for future use.  
+
+2.Login.php
+
+This is a simple HTML login page with a username and password input field, a "Login" button, and a "Forgot Password?" link. It also has some basic styling with a background image and a form with a border and shadow. The form sends the username and password data to the server using the HTTP POST method when the user clicks on the "Login" button.
+
+
+3.dashboard.php
+
+This is a PHP code that generates a web page for a "Treasure Hunt" game. The game seems to be a fictional adventure game where the player will embark on a thrilling adventure to find a treasure. The code uses session variables to retrieve the name of the player, which is displayed in the welcome message.
+
+The code also adds some basic styles to the page using CSS, including a background color, font styles, and a box shadow effect. Additionally, the code adds some animation to the page by using keyframes and animation properties in CSS to create a confetti effect.
+
+The page also includes a button that is styled using CSS and has some basic properties set, such as a background color, font size, and border radius.
+
+Overall, this code generates a simple web page for a fictional Treasure Hunt game that uses PHP and CSS to create a visually appealing and interactive experience for the user.
+
+4.First clue
+
+This appears to be an HTML file containing a story and a guessing game. The story describes a magical forest where a hidden treasure is guarded by the fairy queen. The guessing game requires the user to find a hidden clue in the story and enter it correctly within three attempts to move on to the next level. If the user fails to guess the correct answer within three attempts, the game ends, and the user is redirected to a game over page.
+
+The HTML file contains CSS styles that set the font color, background color, and font family for the story and the guessing game. There is also a JavaScript function that checks the user's answer and provides feedback based on whether the answer is correct or incorrect. If the answer is incorrect, the function increases the number of incorrect attempts and alerts the user of the number of attempts left. If the user has reached the maximum number of incorrect attempts, the function ends the game and redirects the user to a game over page. If the answer is correct, the function alerts the user that they have guessed it right and redirects the user to the next level.
+
+5.Second clue  
+
+This is a HTML file with embedded CSS and JavaScript code. It contains a game in which the player needs to guess which box has the prize among three boxes displayed on the screen.
+
+The HTML structure consists of a div with the class name "container" that contains a heading (h1), a paragraph (p), and three div elements, each with the class name "box" and an id attribute of "box1", "box2", and "box3".
+
+The CSS code defines the styles for the HTML elements, including the background color, font size, border, and animation effects. The box class defines the styles for the boxes, including the width, height, background color, border, border-radius, display, and cursor. The animation effects defined include the pulse effect for the background color and the zoom-in effect for the boxes.
+
+The JavaScript code defines the logic of the game. It initializes the variable prizeBox with the value 2, which represents the box that contains the prize. It also initializes the attempts variable with the value 0, which keeps track of the number of attempts the player has made. The maxAttempts variable is set to 2, which represents the maximum number of attempts the player can make.
+
+The checkGuess function is called when the player clicks on one of the boxes. It takes one argument, which represents the box the player has clicked on. The function increments the attempts variable and checks if the player has clicked on the box that contains the prize. If the player has guessed correctly, a success message is displayed in green color, and the player is redirected to another webpage after three seconds. If the player has exhausted all the attempts, a failure message is displayed in red color, and the player is redirected to another webpage after three seconds. If the player has made a wrong guess, a message with the number of attempts left is displayed in red color.
+
+
+6.Third clue
+
+This is a HTML file with embedded CSS and JavaScript code. The HTML contains two main div elements: "youtube-clue" and "question-container". The "youtube-clue" div contains a header with a title and a paragraph with a hyperlink to a Youtube video. The "question-container" div is hidden by default, but it becomes visible after a delay of 3 seconds using the "myFunction()" JavaScript function. The div contains a question, an input field for the user to enter their answer, a submit button, and a result paragraph which displays whether the user's answer is correct or not, and redirects the user to another HTML page depending on their answer using the "check()" JavaScript function. There is also a CSS style defined for the HTML elements, including the body background color, text color, and hyperlink styles. The JavaScript code defines two functions, "myFunction()" and "check()", which are called when the hyperlink is clicked and the submit button is clicked, respectively.
+
+7.Fourth clue
+
+This is a block of HTML code that creates a webpage with a background image and some interactive elements.
+
+The code starts with the opening <html> tag and includes a <head> section where the stylesheet and JavaScript code are defined. The <style> element contains CSS code that defines the layout and design of the webpage. The <script> elements contain JavaScript code that defines the interactive behavior of the webpage.
+
+The <body> element contains the content of the webpage, which includes a <center> tag that centers the main heading, a <div> element with an ID of "instagram-clue" that contains a link to an Instagram post, and a <div> element with an ID of "question-container" that is initially hidden but becomes visible after a delay defined by the JavaScript function "myFunction()". The <div> with ID "question-container" contains a form with an input field for the user to enter an answer and a button to submit the answer. The JavaScript function "check()" evaluates the user's answer and redirects the user to either a "Congratulations" page or a "Game Over" page depending on the answer.
+
+8.Last puzzle
+
+This is a webpage with a simple implementation of a sliding puzzle game. The game board is a 3x3 grid of image tiles that are randomly ordered. The objective of the game is to slide the tiles around by dragging them with the mouse, until the original image is revealed.
+
+The game board is implemented using HTML and CSS. The board is a div element with id "board", and each tile is an image element with a unique id that is composed of the row and column coordinates (e.g., "0-0" for the top-left tile). The tiles are arranged using CSS flexbox.
+
+The game logic is implemented using JavaScript. When the page loads, the script randomly assigns the image tiles to the game board. The script also adds event listeners to the tiles for mouse drag and drop events. When a tile is dragged and dropped onto an adjacent tile, the two tiles swap places. The script keeps track of the number of turns taken to solve the puzzle, and updates the display accordingly. The script also checks if the puzzle is solved after each turn, by comparing the order of the image tiles to the correct order. If the puzzle is solved, the script displays a message and redirects the user to a "won.html" page after 3 seconds.
+
+9.won.html
+
+This code appears to be a web page that displays falling coins animation and a message that congratulates the user for finding a treasure. The user's name is retrieved from a PHP session variable and displayed in the message.
+
+The script creates an HTML canvas element and uses JavaScript to draw and animate 50 coins on the canvas. The coins are instances of a Coin class that has properties for position, radius, color, and speed. The update() method of the Coin class is responsible for moving the coin down the canvas at a randomized speed and looping it back to the top of the canvas once it reaches the bottom.
+
+The animate() function is called recursively using the requestAnimationFrame() method to continuously update and draw the coins on the canvas.
+
+The commented out HTML code at the bottom of the file appears to be an alternative congratulatory message that includes confetti animation using CSS. However, it is not used in the current implementation of the page.
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+                                                    Soft Skills in this game
+
+Creativity: The game involves the use of graphics, animation, and interactivity to engage the player in a fun and exciting experience.
+
+Problem-solving: The game presents the player with the challenge of finding the treasure among a group of coins. This requires the player to use critical thinking skills to identify patterns and make decisions.
+
+Persistence: The game may require the player to try multiple times before successfully finding the treasure. The ability to persist through failure and keep trying is an important soft skill.
+
+Attention to detail: To find the treasure, the player must carefully examine each coin to identify which one is different. This requires a keen eye for detail.
+
+Communication: The message "Congratulations! You've found the treasure!" communicates the successful completion of the game and reinforces the player's achievement.
+
+Time management: The game is designed to be completed in a certain amount of time. Players who are able to manage their time effectively will be more successful.
+
+Adaptability: The game may require the player to adapt to new challenges as they arise, such as a change in the position or behavior of the coins.
+
+Overall, the treasure hunt game involves a range of soft skills that are important for success in many areas of life.

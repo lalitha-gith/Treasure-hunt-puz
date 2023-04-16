@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+body{
+background-image:url('https://sb.kaleidousercontent.com/133458/1482x1106/b861d37c98/screenshot-2022-09-14-at-10-22-47.png');
+}
+#question-container {
+  display:none;
+  margin-top: 20px;
+}
+#instagram-clue{
+position:fixed;
+left:1000;
+right:20;
+}
+#question-container.active {
+  
+  display: block;
+}
+#qw{
+position:fixed;
+  left:500;
+  top:170;
+  
+}
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+p{
+color:#f70776;
+font-size:20px;
+}
+</style>
+<script>
+function myFunction(){
+setTimeout(function() {
+   document.getElementById('question-container').style.display='block' ;
+  }, 3000);
+}
+
+function check(){
+let s=document.getElementById("answer-input").value;
+if(s==="18"){
+document.getElementById("result").innerHTML = "Congratulations! You are right!";
+    document.getElementById("result").style.color = "green";
+    setTimeout(function() {
+    window.location.href = "fifth.html";
+  }, 3000);
+}
+else{
+document.getElementById("result").innerHTML = "You are incorrect";
+    document.getElementById("result").style.color = "red";
+    setTimeout(function() {
+    window.location.href = "gameover.html";
+  }, 3000);
+}
+}
+
+</script>
+<script src="myscript.js"></script>
+</head>
+<body>
+<center><h1>
+Have a keen observation on suggested post</h1>
+</center>
+<div id="instagram-clue">
+
+
+  <p>Follow the clue on <a href="https://www.instagram.com/p/BsOGulcndj-/?utm_source=ig_web_copy_link" onclick="myFunction()">Instagram</a></p>
+</div>
+
+<div id="question-container" class="hidden">
+<div id="qw">
+  <h2>How many likes did that post hit according to the description,answer carefully you can only answer once</h2>
+  <input type="text" id="answer-input" placeholder="Enter your answer...">
+  <button id="submit-answer" onclick="check()">Submit</button>
+  <p id="result"></p>
+</div>
+</div>
+</body>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+h2{
+margin:0px;
+}
+h2{
+background-color:#8dc6ff;
+margin-top:0px;
+padding-top:10px;
+}
+.hidden-text {
+    color: #ffffff; /* set the font color to be the same as the background color */
+    background-color: #ffffff; /* set the background color to be the same as the font color */
+}
+
+.hidden-text:hover {
+    color: #000000; /* change the font color to something visible on hover */
+}
+p{
+
+color: #060608;
+padding: 10px;
+font-family: 'Open Sans', sans-serif;
+line-height: 1.5;
+ font-size: 18px;
+}
+</style>
+<script src="myscript.js"></script>
+<script>
+
+var incorrectAttempts = 0;
+function checkAnswer(){
+const answer=document.getElementById("userGuess").value;
+
+if (answer === "6") {
+   alert("CONGRATULATIONS! you guesses it right,move to the next level");
+  window.location.href='second.html';
+} else {
+  // If the answer is incorrect, increase the number of incorrect attempts
+  incorrectAttempts++;
+
+  // Alert the user that their answer is incorrect and how many attempts they have left
+  alert("Sorry, that's incorrect. You have " + (3 - incorrectAttempts) + " attempts left.");
+
+  // Check if the user has reached the maximum number of incorrect attempts
+  if (incorrectAttempts === 3) {
+    // If the user has reached the maximum number of incorrect attempts, end the game
+    alert("Sorry, you have failed to complete the treasure hunt.");
+    window.location.href = "gameover.html"; // Redirect the user to the game over page
+  }
+}
+}
+</script>
+</head>
+<body>
+<center>
+<h2>Read the story carefully the clue is in the story and is hidden,you need to find it<br>The Enchanted Forest</h2></center>
+<div class="story">
+  
+    <p>Deep within the forest lies a magical realm where fairies, gnomes, and other mystical creatures dwell. It is said that within this realm, there is a hidden treasure that is guarded by the most powerful fairy queen.</p>
+    <p>Many have searched for the treasure, but none have been successful. The forest is full of traps and illusions that have thwarted even the most skilled adventurers.</p>
+    <p>You are a brave explorer, however, and you have accepted the challenge to find the treasure. You enter the forest, and as you travel deeper into its heart, you begin to notice strange things happening around you.</p>
+<p class="hidden-text">6</p>
+<p>The trees seem to be moving, and the flowers emit a soft glow that illuminates your path. You hear the sound of laughter in the distance, and you realize that the forest is alive.</p>
+    <p>As you approach the heart of the forest, you suddenly come face to face with the fairy queen. She is a beautiful creature, with wings made of pure gold and a voice like music.</p>
+    <p>She tells you that the treasure you seek is not just a pile of gold and jewels, but a magical artifact that can grant the bearer immense power. She warns you that the artifact is coveted by many, and that there are those who will stop at nothing to obtain it.</p>
+    <p>You realize that you are in grave danger, but you also know that the treasure is worth the risk. Will you be able to outsmart the traps and illusions of the forest, and claim the magical artifact for yourself?</p>
+</div>
+<div>
+<p>Enter your answer,you need to answer in correctly in <span style="color:darkred">Three attempts:</span></p>
+<input type="number" id="userGuess">
+<button id="checkAnswerButton" onclick="checkAnswer()">Check Answer</button>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+body{
+background-color:#f4f56e;
+}
+#question-container {
+  display:none;
+  margin-top: 20px;
+}
+.o{
+margin:0px;
+color:#f6378f;
+}
+p{
+font-size:20px;
+margin-top:200px;
+}
+#question-container.active {
+  display: block;
+}
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+<script>
+function myFunction(){
+setTimeout(function() {
+   document.getElementById('question-container').style.display='block' ;
+  }, 3000);
+}
+
+function check(){
+let s=document.getElementById("answer-input").value;
+if(s==="6"){
+document.getElementById("result").innerHTML = "Congratulations! You are right!";
+    document.getElementById("result").style.color = "green";
+    setTimeout(function() {
+    window.location.href = "fourth.html";
+  }, 3000);
+}
+else{
+document.getElementById("result").innerHTML = "You are incorrect";
+    document.getElementById("result").style.color = "red";
+    setTimeout(function() {
+    window.location.href = "gameover.html";
+  }, 3000);
+}
+}
+
+</script>
+<script src="myscript.js"></script>
+</head>
+<body>
+<div id="instagram-clue">
+
+<center><h1 class="o">Give an eye on every detail</h1></center>
+ <center> <p ><i>Follow the clue on <a href="https://youtu.be/yFnFhu75CKc" onclick="myFunction()">Youtube</a></i></p></center>
+</div>
+
+<div id="question-container" class="hidden">
+ <center> <h2>How many steps does he included in the process of finding one's age?</h2>
+  <input type="text" id="answer-input" placeholder="Enter your answer...">
+  <button id="submit-answer" onclick="check()">Submit</button>
+  <p id="result"></p></center>
+</div>
+</body>
